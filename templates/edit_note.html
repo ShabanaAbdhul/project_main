@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="/static/css/editnote.css">
+{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+
+    <!-- Header with image and title -->
+    <div class="header">
+    
+        <h2>Edit Note</h2> 
+    </div>
+
+    <!-- Edit Note Form -->
+    <form method="POST" class="edit-note-form">
+        <textarea name="content" required>{{ note.content }}</textarea>
+
+        <div class="button-group">
+            <button type="submit" class="save-btn">Save Note</button>
+            <a href="{{ url_for('dashboard') }}" class="cancel-btn">Cancel</a>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/navfoot.css">
+{% endblock %}
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">NotesApp</a>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="nav-links">
+      {% if request.path == '/' %}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      {% elif request.path == '/login' %}
+        <li><a href="/register">Register</a></li>
+      {% elif request.path == '/register' %}
+        <li><a href="/login">Login</a></li>
+      {% elif request.path == '/dashboard' and 'uname' in session %}
+        <li><a href="/logout">Logout</a></li>
+      {% else %}
+        {% if 'uname' in session %}
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/logout">Logout</a></li>
+        {% else %}
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+        {% endif %}
+      {% endif %}
+    </ul>
+  </div>
+</nav>

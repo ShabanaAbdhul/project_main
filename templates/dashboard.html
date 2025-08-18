@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link href="/static/css/dashboard.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h1>Welcome, {{ session['uname'] }}</h1>
+
+    <form method="POST" class="note-form">
+        <textarea name="note" placeholder="Write your note..." required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <div class="notes-section">
+        {% if notes %}
+            {% for note in notes %}
+            <div class="note-card">
+                <p>{{ note.content }}</p>
+                <div class="note-actions">
+                    <form action="/delete_note/{{ note.id }}" method="POST">
+                        <button class="delete-btn" type="submit">Delete</button>
+                    </form>
+                    <a href="/edit_note/{{ note.id }}">
+                        <button class="edit-btn">Edit</button>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-notes">No notes available.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

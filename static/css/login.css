@@ -1,0 +1,130 @@
+/* Background only for login content area */
+.login-background {
+    background-image: url("./1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; /* leave space for navbar/footer */
+}
+
+/* Form container */
+.login-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+}
+
+/* Other styles (unchanged) */
+.login-wrapper h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-shadow: 1px 1px 3px #000;
+    text-align: center;
+}
+
+/* Form style */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Inputs */
+.input {
+    border: none;
+    border-bottom: 1px solid #333;
+    background-color: transparent;
+    padding: 10px 5px;
+    font-size: 15px;
+    width: 100%;
+    color: #000;
+}
+
+.input:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    border-radius: 25px;
+    background-color: rgb(215, 220, 250);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+/* Links */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error/success messages */
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-wrapper {
+        padding: 30px 20px;
+    }
+
+    .form {
+        gap: 15px;
+    }
+
+    .login-wrapper h1 {
+        font-size: 22px;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

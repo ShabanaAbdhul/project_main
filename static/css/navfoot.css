@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #6a11cb, #25b8fc);
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu toggle for mobile */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer.foot {
+  background: linear-gradient(to right, #6a11cb, #25b8fc);
+  color: white;
+  padding: 30px 20px 10px;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.ff {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.f1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.f1 > div {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.f1 a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.f1 a:hover {
+  text-decoration: underline;
+}
+
+.f2 {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .f1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .f2 p {
+    text-align: center;
+  }
+}

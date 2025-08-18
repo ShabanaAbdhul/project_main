@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/verify.css">
+{% endblock %}
+
+{% block content %}
+<div class="verify-container">
+    <div class="verify-card">
+        <h2>Email OTP Verification</h2>
+        {% if info %}
+            <p class="info">{{ info }}</p>
+        {% endif %}
+        <form action="/verify" method="POST">
+            <label for="otp">Enter the OTP sent to your email:</label>
+            <input type="text" name="otp" placeholder="6-digit OTP" required>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

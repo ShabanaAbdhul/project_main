@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="/static/css/home.css">
+{% endblock %}
+
+{% block body_class %}home-page{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="home-box">
+        <h1 style="color: black;">Welcome to Notes Management</h1>
+        <p style="color: black;">Organize your thoughts, tasks, and reminders all in one place.</p>
+        <div class="home-buttons">
+            <a href="/login" class="btn">Login</a>
+            <a href="/register" class="btn secondary">Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

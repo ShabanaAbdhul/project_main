@@ -1,0 +1,61 @@
+body {
+    background: #f7f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-wrapper {
+    max-width: 700px;
+    margin: 100px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.header img {
+    margin-top: 5px;
+}
+
+.edit-note-form textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-btn, .cancel-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #00cc99;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #888;
+    color: white;
+}
